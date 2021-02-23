@@ -24,9 +24,9 @@ read_dir = function(path, pattern, into) {
 
 ########################################################################
   
-battles <- read_dir(path    = "battles",
+battles <- read_dir(path    = "../battles",
                     pattern = "*.csv",
-                    into    = c("battles","date","extension")) %>%
+                    into    = c("tmp","battles","date","extension")) %>%
   
   dplyr::mutate(
     date     = substring(date,2),
@@ -41,5 +41,5 @@ battles <- read_dir(path    = "battles",
   
   dplyr::select(date, battleID, userID, battle, attempts, simulated)
 
-usethis::use_data(battles, overwrite = TRUE)
+write_csv(battles, "../tidy/battles.csv")
   
