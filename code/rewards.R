@@ -30,9 +30,9 @@ read_reward_dir = function(path, pattern, into) {
 
 ################################################################################
 
-rewards_raw <- read_reward_dir(path    = "rewards",
+rewards_raw <- read_reward_dir(path    = "../rewards",
                            pattern = "*.csv",
-                           into    = c("rewards","date","extension")) %>%
+                           into    = c("tmp","rewards","date","extension")) %>%
   
   dplyr::mutate(
     date = gsub("r", "", date),
@@ -49,7 +49,5 @@ rewards <- battles %>%
          count = as.integer(count))
 
 
-
-usethis::use_data(rewards_raw, overwrite = TRUE)
-usethis::use_data(rewards,     overwrite = TRUE)
-  
+readr::write_csv(rewards_raw, "../tidy/rewards_raw.csv")
+readr::write_csv(rewards,     "../tidy/rewards.csv")

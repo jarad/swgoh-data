@@ -41,5 +41,5 @@ battles <- read_dir(path    = "../battles",
   
   dplyr::select(date, battleID, userID, battle, attempts, simulated)
 
-write_csv(battles, "../tidy/battles.csv")
+readr::write_csv(battles, "../tidy/battles.csv")
   
