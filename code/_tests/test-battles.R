@@ -1,7 +1,3 @@
-library("testthat")
-library("tidyverse")
-
-source("files.R")
 
 for (i in seq_along(files$battle)) {
   file <- files$battle[i]

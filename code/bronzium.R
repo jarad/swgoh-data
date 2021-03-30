@@ -1,3 +1,5 @@
+stop("This file hasn't been used in a while!")
+
 library("dplyr")
 library("tidyr")
 library("readr")
@@ -27,7 +29,7 @@ read_bronzium_dir = function(path, pattern, into) {
 
 ################################################################################
 
-bronzium <- read_bronzium_dir(path    = "store",
+bronzium <- read_bronzium_dir(path    = "data/store",
                            pattern = "*.csv",
                            into    = c("store","date","extension")) %>%
   
@@ -36,7 +38,4 @@ bronzium <- read_bronzium_dir(path    = "store",
     date = as.Date(date, format = "%Y%m%d")) %>% 
   
   dplyr::select(userID, type, reward, amount) 
-  
-
-usethis::use_data(bronzium, overwrite = TRUE)
   
