@@ -1,3 +1,5 @@
+stop("This file hasn't been run in a while.")
+
 library("readr")
 library("dplyr")
 library("tidyr")
@@ -25,10 +27,8 @@ read_users_dir = function(path, pattern, into) {
 
 ########################################################################
 
-users <- read_users_dir(path    = "users",
+users <- read_users_dir(path    = "data/users",
                           pattern = "*.csv",
                           into    = c("users","year","month","extension")) %>%
   
   select(date, userID, level, power)
-
-usethis::use_data(users, overwrite = TRUE)

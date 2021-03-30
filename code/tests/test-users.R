@@ -1,9 +1,5 @@
-library("testthat")
-library("tidyverse")
 
-source("files.R")
-
-files <- paste0("../../users/", unique(format(dates, "%Y-%m")), ".csv")
+files <- paste0(data_dir, "users/", unique(format(dates, "%Y-%m")), ".csv")
 
 for (i in seq_along(files)) {
   file <- files[i]
