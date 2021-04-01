@@ -22,12 +22,11 @@ tests and tidying.
 
 Raw data test is available through the following code
 
-    library("testthat")
-    test_dir("code/tests/")
+    source("test.R")
     
 while scripts to tidy the data are available through this code
 
-    source("code/tidy/run_all.R")
+    source("tidy.R")
 
 ## R package
 

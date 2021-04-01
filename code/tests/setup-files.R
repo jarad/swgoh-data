@@ -1,7 +1,7 @@
 library("testthat")
 library("tidyverse")
 
-data_dir = "../../data/raw/"
+source("code/dirs.R")
 
 dates <- Sys.Date()
 # dates <- seq(as.Date("2019-12-03"), Sys.Date(), "days") # uncomment to test all files
