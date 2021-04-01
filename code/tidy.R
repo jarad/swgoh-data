@@ -3,8 +3,6 @@
 tidy_dir = "data/tidy/"
 raw_dir  = "data/raw/"
 
-source("code/tidy/setup.R")
-
 source("code/tidy/battle_details.R")
 source("code/tidy/battle_rewards.R")
 source("code/tidy/reward_details.R")
