@@ -1,7 +1,7 @@
 library("testthat")
 library("tidyverse")
 
-data_dir = "../../data/"
+data_dir = "../../data/raw/"
 
 dates <- Sys.Date()
 # dates <- seq(as.Date("2019-12-03"), Sys.Date(), "days") # uncomment to test all files
@@ -13,4 +13,4 @@ files <- data.frame(
   stringsAsFactors = FALSE
 )
 
-battle_rewards = read.csv(paste0(data_dir, "tidy/battle_rewards.csv"))
+battle_rewards = read.csv(paste0(data_dir, "../tidy/battle_rewards.csv"))
