@@ -1,17 +1,12 @@
 # Data
 
-These data sets are created by the `run_all.R` script:
-
-  - battles: battles fought
-  - rewards: battle rewards
-  - users: daily user information including level and galactic power
-  - store/bronzium: bronzium cards purchased in the store
-  - battle_details: battle energy cost
-  - battle_rewardss: possible battle rewards
+This directory contains the raw data, i.e. the data exactly as it was collected.
+The data only contain non-zero observations and therefore any analysis will
+likely need to add back the zero observations. 
   
 
   
-## battles
+## battles/
 
 Files with filename bYYYYMMDD.csv containing the following columns:
 
@@ -20,7 +15,7 @@ Files with filename bYYYYMMDD.csv containing the following columns:
   - battle: battle name
   - n_sims: number of times the battle was simulated, if 0 then the battle was fought
   
-## rewards
+## rewards/
 
 Files with filenames rYYYYMMDD.csv containing the following columns:
 
@@ -28,7 +23,7 @@ Files with filenames rYYYYMMDD.csv containing the following columns:
   - reward: reward name
   - count: number of that reward received
   
-## users
+## users/
 
 Files with filenames YYYY-MM.csv containing the following columns:
 
@@ -37,10 +32,10 @@ Files with filenames YYYY-MM.csv containing the following columns:
   - level: the level for that user at the start of the day
   - power: the galactic power for that user at the start of the day
   
-## store
+## store/
 
 The store data currently only contains bronzium card data. 
-Bronzium cards have filenames bronziumYYYYMMDD.csv and containg the following
+Bronzium cards have filenames bronziumYYYYMMDD.csv and contain the following
 columns:
 
   - userID: designated user identification number
@@ -48,18 +43,5 @@ columns:
   - reward: the reward received
   - amount: the amount of that reward received
   
-  
-## battle_details/
 
-Two files containing static battle details:
-
-battle_details.csv columns:
-
-  - battle
-  - energy
-
-battle_rewards.csv columns:
-
-  - battle
-  - reward
   
