@@ -1,5 +1,8 @@
 # Prioritized by the least likely to change on top
 
+tidy_dir = "data/tidy/"
+raw_dir  = "data/raw/"
+
 source("code/tidy/setup.R")
 
 source("code/tidy/battle_details.R")
